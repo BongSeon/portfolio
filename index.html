@@ -1,18 +1,167 @@
 <!DOCTYPE html>
-<html lang="ko>
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aestas's Portfolio</title>
-  <meta 
-    name="description"
-    content="Portfolio for software engineer Aestas Kwak"
-  />
-  <meta name="author" content="Aestas"/>
-  <link rel="icon" type="image/icon" href="imgs/favicon.ico">
-</head>
-<body>
-  <h1>Aestas Kwak's Portfolio</h1>
-</body>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aestas's Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio for software engineer Aestas Kwak"
+    />
+    <meta name="author" content="Aestas" />
+    <link rel="icon" type="image/icon" href="imgs/favicon.ico" />
+    <script
+      src="https://kit.fontawesome.com/ce7fade0c6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav id="navbar">
+      <div class="navbar__logo">
+        <i class="fas fa-disease navbar__icon"></i><a href="#">Aestas</a>
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__menu__item active">Home</li>
+        <li class="navbar__menu__item">About</li>
+        <li class="navbar__menu__item">Home</li>
+      </ul>
+      <!-- Toggle button -->
+      <button class="navbar__toggle-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+
+    <!-- Home -->
+    <section id="home">
+      <div class="home__container">
+        <img
+          src="imgs/home-avatar.png"
+          alt="Aestas's profile picture"
+          class="home__avatar"
+        />
+        <h1>Aestas Kwak's Portfolio</h1>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="section__container">
+        <h1>about me</h1>
+        <div class="about__wrap">
+          <div class="about__left">
+            <img
+              src="imgs/about-avatar.svg"
+              alt="Aestas's profile picture"
+              class="about__avatar"
+            />
+          </div>
+          <div class="about__right">
+            <div class="about__whoami">
+              <p>
+                I am Bolby Doe, web developer from London, United Kingdom. I
+                have rich experience in web site design and building and
+                customization, also I am good at WordPress.
+              </p>
+            </div>
+            <div class="about__skillset">
+              <h3 class="skillset__title">Skills</h3>
+              <div class="skill">
+                <div class="skill__description">
+                  <span>HTML / CSS</span>
+                  <span>95%</span>
+                </div>
+                <div class="skill__bar">
+                  <div class="skill__value" style="width: 95%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill__description">
+                  <span>JavaScript</span>
+                  <span>85%</span>
+                </div>
+                <div class="skill__bar">
+                  <div
+                    class="skill__value"
+                    style="width: 85%; background-color: var(--color-orange)"
+                  ></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill__description">
+                  <span>Vue</span>
+                  <span>80%</span>
+                </div>
+                <div class="skill__bar">
+                  <div
+                    class="skill__value"
+                    style="width: 80%; background-color: var(--color-green)"
+                  ></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill__description">
+                  <span>NodeJS</span>
+                  <span>70%</span>
+                </div>
+                <div class="skill__bar">
+                  <div
+                    class="skill__value"
+                    style="width: 70%; background-color: var(--color-blue)"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="section__container">
+        <h1>Skills</h1>
+        <h2>Skills & Attributes</h2>
+        <div class="skills__majors">
+          <div class="major">
+            <div class="major__icon">
+              <i class="fab fa-html5"></i>
+            </div>
+            <h2 class="major__title">Front-end</h2>
+            <div class="major__description">
+              HTML, CSS, JavaScript, TypeScript, React, Vue, Web APIs
+            </div>
+          </div>
+          <div class="major">
+            <div class="major__icon">
+              <i class="fas fa-mobile"></i>
+            </div>
+            <h2 class="major__title">Mobile</h2>
+            <p class="major__description">
+              Android, iOS, React Native, Flutter, Java, Swift, Kotlin
+            </p>
+          </div>
+          <div class="major">
+            <div class="major__icon">
+              <i class="fas fa-server"></i>
+            </div>
+            <h2 class="major__title">Back-end</h2>
+            <p class="major__description">
+              Java, JavaScript, Go, NodeJS, Rest APIs, GraphGL
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="recent">
+      <div class="section__container">
+        <h1>Recent Works</h1>
+      </div>
+    </section>
+  </body>
 </html>
