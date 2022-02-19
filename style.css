@@ -107,11 +107,20 @@ p {
 
 /* Navbar */
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5px 22px;
+  background-color: transparent;
+  transition: all var(--animation-duration) ease-in-out;
+  z-index: 1;
+}
+
+#navbar.navbar--dark {
   background-color: var(--color-dark-grey);
+  padding: 0px 22px;
 }
 
 .navbar__logo {
@@ -154,6 +163,7 @@ p {
   font-size: 24px;
   color: var(--color-white);
   display: none;
+  transition: all var(--animation-duration) ease-in-out;
 }
 
 /* Home */
@@ -163,12 +173,11 @@ p {
 }
 .home__wrap {
   background-color: #191c29a7;
-  padding: 30px;
+  padding: 70px 30px 30px 30px;
 }
 
 #home h2 {
   color: var(--color-light-white);
-  /* text-shadow: 0 0 3px #ffffffff, 0 0 6px rgba(140, 140, 230, 0.523); */
 }
 
 .home__avatar {
@@ -192,15 +201,15 @@ p {
   color: var(--color-white);
   font-size: var(--font-regular);
   font-weight: var(--weight-bold);
-  margin: 24px;
+  margin: 20px;
   padding: 8px 12px;
-  border: 2px solid var(--color-white);
+  border: 2px dotted var(--color-blue);
   border-radius: var(--size-border-radius);
 }
 
 /* Section common */
 .section {
-  padding: 30px 40px;
+  padding: 60px 40px;
   text-align: center;
   margin: auto;
   background: var(--color-subtle-grey);
@@ -355,7 +364,6 @@ p {
 }
 
 .card::after {
-  /* display: none; */
   position: absolute;
   content: "";
   left: 0;
@@ -419,7 +427,6 @@ p {
 }
 
 /* Recent Works */
-
 .work__categories {
   text-align: left;
 }
@@ -470,8 +477,6 @@ p {
 
 .project__img {
   width: 115%;
-  /* background-position: center/cover;
-  background-repeat: no-repeat; */
   align-self: center;
 }
 
@@ -592,7 +597,6 @@ p {
 
 /* Contact */
 #contact {
-  /* position: relative; */
   background: none;
 }
 
@@ -619,8 +623,16 @@ p {
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
+  #navbar.navbar--dark {
+    padding: 8px 22px;
+  }
+
   .navbar__toggle-btn {
     display: block;
+  }
+
+  .navbar--dark .navbar__toggle-btn {
+    top: 8px;
   }
 
   #navbar {
@@ -634,6 +646,10 @@ p {
     text-align: center;
     width: 100%;
     display: none;
+  }
+
+  .navbar__menu.open {
+    display: block;
   }
 
   .about__right {
