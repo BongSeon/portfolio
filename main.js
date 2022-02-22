@@ -37,6 +37,12 @@ contactMeButton.addEventListener("click", () => {
 });
 
 // Make home slowly fade to transparent as the window scrolls down
+document.addEventListener("scroll", () => {
+  const home = document.querySelector("#home");
+  const opacity =
+    1 - (window.scrollY - 20) / (home.getBoundingClientRect().height * 0.5);
+  home.style.opacity = opacity;
+});
 
 // Show "arrow up" button when scrolling down
 
