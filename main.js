@@ -48,7 +48,55 @@ document.addEventListener("scroll", () => {
 
 // Handle click on the "arrow up" button
 
-// Projects
+// handle project detail click
+const listBtnContainer = document.querySelector(".work__categories");
+const projectContainer = document.querySelector(".work__projects");
+const projects = document.querySelectorAll(".project");
+listBtnContainer.addEventListener("click", (e) => {
+  // console.log(e.target.dataset.filter);
+  // console.log(e.target.parentNode.dataset.filter);
+  // const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  const filter = e.target.dataset.filter;
+  // console.log(filter);
+  if (filter == null) {
+    return;
+  }
+
+  const active = document.querySelector(".list__item.selected");
+  console.log(active);
+  if (active != null) {
+    active.classList.remove("selected");
+  }
+  e.target.classList.add("selected");
+
+  projects.forEach((project) => {
+    // console.log(project.dataset.type);
+    if (filter === "*" || filter === project.dataset.type) {
+      project.classList.add("show");
+    } else {
+      project.classList.remove("show");
+    }
+  });
+});
+
+/*
+const listBtns = document.querySelectorAll(".list__item");
+// const projects = document.querySelectorAll(".project");
+console.log(listBtns);
+listBtns.forEach((li) => {
+  li.addEventListener("click", () => {
+    // console.log(li.dataset.type);
+    projects.forEach((project) => {
+      console.log(project.dataset.type);
+      if (project.dataset.type == li.dataset.type) {
+        project.classList.add("show");
+      } else {
+        project.classList.remove("show");
+      }
+    });
+  });
+});
+*/
 
 // Remove selection from the previous item and select the new one
 
